@@ -22,6 +22,7 @@ public class Gui extends CheckMessages{
     private static JPanel frame4;
     private static JPanel frame5;
     private static JPanel frame6;
+    private static JPanel frame2a;
     
     //properties of the window
     static void FrameProperties(){
@@ -66,6 +67,11 @@ public class Gui extends CheckMessages{
         frame6 = new JPanel();
         frame6.setLayout(null);
         cardPanels.add(frame6,"6");
+    }
+    static void frame2a(){
+        frame2a = new JPanel();
+        frame2a.setLayout(null);
+        cardPanels.add(frame2a,"7");
     }
 
     //This is the screen that the user first interacts with, where you can log in, reset password, or create account
@@ -132,6 +138,20 @@ public class Gui extends CheckMessages{
         });
 
     }
+
+
+    //this panel is to make sure we're resetting the correct user's password
+    //It will also check if the user exists or not
+    static void UResetPassword(){
+        JLabel username = new JLabel("Username"); //label for the username
+        JTextField ans = new JTextField(); //answer for the username 
+        JButton back = new JButton("Back"); //goes back to the welcome screen
+        JButton next = new JButton("Next"); //goes to the resetPassword frame
+        username.setBounds(300,100,200,50);
+        ans.setBounds(300,150,200,50);
+        back.setBounds(0, 0, 100, 50);
+    }
+
     //This panel is for users when they wnat to reset their passwords
     static void ResetPassword(){
         JLabel Q1 = new JLabel("Question 1");//label for question 1
